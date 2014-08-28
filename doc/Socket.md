@@ -6,7 +6,7 @@
 
 ## Supported elements :
 
-  * Persistant publishing
+  * Publishing
   * Subscribe
 
 ## Configuration options & defaults
