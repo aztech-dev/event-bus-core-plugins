@@ -13,12 +13,12 @@ Using databases as event queues is not recommended, especially in replicated env
 
 | Parameter | Default | Description |
 |--------------|-------------|-------------------------------------------------------------------------------------------|
-| `driver` | *Required* | PDO driver name. |
+| `driver` | **Required** | PDO driver name. |
 | `host` | `127.0.0.1` | Hostname of the database host. |
 | `port` | `3306` | Port of the database. |
-| `user` | `` | Username. |
-| `pass` | `` | Password. |
-| `database` | *Required* | Name of the database/schema to use. |
+| `user` | ( *Empty* ) | Username. |
+| `pass` | ( *Empty* ) | Password. |
+| `database` | **Required** | Name of the database/schema to use. |
 | `table` | `events` | Name of the event table. |
 | `id-column` | `id` | Name of the primary column. |
 | `data-column` | `data` | Name of the data column. |
