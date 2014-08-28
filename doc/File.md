@@ -46,6 +46,4 @@ $application->run();
 
 ## Caveats
 
-At the time being, the AMQP event plugin uses topic based routing to publish events. Multiple nodes connecting to a single queue will work in round-robin mode.
-
-It is possible to use different routing scenarios/exchange types, but that is left as an exercise to the reader (Hint: no need to build/patch the current plugin).
+The file plugin uses the `flock` PHP function to perform exclusive writes on the event queue, which is known to have issues in some contexts. Please read the PHP notes on [flock](http://php.net/manual/en/function.flock.php#refsect1-function.flock-notes) for more information.
