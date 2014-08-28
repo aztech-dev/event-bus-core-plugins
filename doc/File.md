@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-  * No dependencies *
+  * *No dependencies*
 
 ## Supported elements :
 
