@@ -16,8 +16,7 @@ The memory plugin is suitable only for event dispatching within a single process
 ## Configuration options & defaults
 
 | Parameter | Default | Description |
-|--------------|-------------|-------------------------------------------------------------------------------------------|
-| `file` | **Required** | Path to the file used as a queue. |
+|--------------|-------------|-------------------------------------------------------------------------------------------
 
 ## Usage
 
