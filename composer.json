@@ -15,7 +15,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "aztech/event-bus": "dev-master",
+        "aztech/event-bus": "~1",
         "aztech/php-utils": "~0",
         "psr/log": "~1.0"
     },
@@ -31,7 +31,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.1.x-dev"
         }
     }
 }
