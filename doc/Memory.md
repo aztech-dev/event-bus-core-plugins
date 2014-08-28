@@ -50,4 +50,4 @@ $application->run();
 
 ## Caveats
 
-The file plugin uses the `flock` PHP function to perform exclusive writes on the event queue, which is known to have issues in some contexts. Please read the PHP notes on [flock](http://php.net/manual/en/function.flock.php#refsect1-function.flock-notes) for more information.
+As stated above, this plugin only works "in-process". Events published with this plugin cannot cross process boundaries.
