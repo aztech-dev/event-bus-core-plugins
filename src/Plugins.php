@@ -7,6 +7,8 @@ use Aztech\Events\Bus\Factory\GenericOptionsDescriptor;
 use Aztech\Events\Bus\GenericPluginFactory;
 use Aztech\Events\Bus\Plugins\File\FileChannelProvider;
 use Aztech\Events\Bus\Plugins\Memory\MemoryChannelProvider;
+use Aztech\Events\Bus\Plugins\Pdo\PdoChannelProvider;
+use Aztech\Events\Bus\Plugins\Pdo\PdoOptionsDescriptor;
 use Aztech\Events\Bus\Plugins\Socket\SocketChannelProvider;
 use Aztech\Events\Bus\Plugins\Socket\SocketOptionsDescriptor;
 
@@ -38,5 +40,13 @@ class Plugins
         {
             return new SocketChannelProvider();
         }, new SocketOptionsDescriptor()));
+    }
+
+    static function loadPdoPlugin($name ='pdo')
+    {
+        Events::addPlugin($name, new GenericPluginFactory(function ()
+        {
+            return new PdoChannelProvider();
+        }, new PdoOptionsDescriptor()));
     }
 }
