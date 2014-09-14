@@ -4,6 +4,7 @@ namespace Aztech\Events\Bus\Plugins\File;
 
 use Aztech\Events\Event;
 use Aztech\Events\Bus\Channel\ChannelWriter;
+use Aztech\Util\File\Files;
 
 class FileChannelWriter implements ChannelWriter
 {
@@ -17,27 +18,12 @@ class FileChannelWriter implements ChannelWriter
     public function write(Event $event, $serializedEvent)
     {
         if ($handle = fopen($this->file, "c+")) {
-            if ($this->callEx($handle, $serializedEvent, array($this, 'append'))) {
+            if (Files::invokeEx(array($this, 'append'), $handle, $serializedEvent)) {
                 fflush($handle);
             }
 
             fclose($handle);
         }
-    }
-
-    /**
-     * @todo Loop until lock is avail, within timeout
-     */
-    private function callEx($handle, $data, $callback)
-    {
-        if (flock($handle, LOCK_EX)) {
-            call_user_func($callback, $handle, $data);
-            flock($handle, LOCK_UN);
-
-            return true;
-        }
-
-        return false;
     }
 
     public function append($handle, $data)

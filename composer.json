@@ -20,9 +20,10 @@
         "psr/log": "~1.0"
     },
     "require-dev": {
+        "aztech/coding-standard": "~0.1",
+        "mikey179/vfsStream": "~1",
         "phpunit/phpunit": "~4.2",
         "squizlabs/php_codesniffer": "~1.5",
-        "mikey179/vfsStream": "~1",
         "vektah/bugfree-dangerzone": "0.2.0"
     },
     "suggest": {

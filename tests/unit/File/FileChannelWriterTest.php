@@ -56,7 +56,7 @@ class FileChannelWriterTest extends \PHPUnit_Framework_TestCase
 
     public function testWriterIgnoresWriteWithoutLock()
     {
-        $file = fopen($this->file, 'w');
+        $file = fopen($this->file, 'c+');
         flock($file, LOCK_EX);
 
         $event = $this->getMock('Aztech\Events\Event');
