@@ -14,7 +14,7 @@ before_script:
 
 script:
   - make test
-  - [ $(phpenv version-name) = $PHP_CURRENT ] && make test-upload
+  - "[ $(phpenv version-name) = $PHP_CURRENT ] && make test-upload"
   - make clean
 
 matrix:
