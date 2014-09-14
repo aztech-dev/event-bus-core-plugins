@@ -15,6 +15,9 @@ class SocketWrapperBuilder
         return new SocketWrapper($socket);
     }
 
+    /**
+     * @return integer
+     */
     public function getDomain($protocol)
     {
         switch ($protocol) {
@@ -28,6 +31,9 @@ class SocketWrapperBuilder
         }
     }
 
+    /**
+     * @return integer
+     */
     public function getProtocol($protocol)
     {
         switch ($protocol) {
