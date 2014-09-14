@@ -8,6 +8,7 @@ php:
   - hhvm-nightly
 
 before_script:
+  - php --version
   - composer selfupdate
   - composer install --dev
 
