@@ -10,11 +10,11 @@ php:
 before_script:
   - php --version
   - composer selfupdate
-  - export PHP_CURRENT='5.6'
+  - PHP_CURRENT='5.6'
 
 script:
   - make test
-  - "[ $(phpenv version-name) = $PHP_CURRENT ] && make test-upload"
+  - '[ $(phpenv version-name) = "$PHP_CURRENT" ] && make test-upload'
   - make clean
 
 matrix:
