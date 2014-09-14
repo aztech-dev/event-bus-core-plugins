@@ -12,6 +12,9 @@ class SocketWrapper
 
     protected $socket;
 
+    /**
+     * @param resource $socket
+     */
     public function __construct($socket, LoggerInterface $logger = null)
     {
         if (! $this->isSocket($socket)) {
@@ -73,6 +76,9 @@ class SocketWrapper
         return $received;
     }
 
+    /**
+     * @param string $data
+     */
     public function writeRaw($data)
     {
         $writtenCharCount = 0;
